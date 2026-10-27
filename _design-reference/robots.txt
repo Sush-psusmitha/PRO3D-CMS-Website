@@ -1,0 +1,12 @@
+User-agent: *
+Disallow:
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+Allow: /images/home/pro-3d-logo-white.png
+
+Sitemap: https://professional3dservices.com/sitemap_new.xml

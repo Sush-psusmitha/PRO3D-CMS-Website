@@ -1,0 +1,199 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.professional3dservices.com [NC]
+RewriteRule ^(.*)$ https://professional3dservices.com/$1 [R=301,L]
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+AddType video/webm .webm
+AddType video/mp4 .mp4
+ErrorDocument 404 https://professional3dservices.com/404.html
+
+Redirect 301 /3d-modeling-for-printing.html https://professional3dservices.com/3d-print-designs.html
+Redirect 301 /3d-floor-plan-conversion.html https://professional3dservices.com/floor-plan-design.html
+Redirect 301 /3d-rendering/architectural/exterior.html/ https://professional3dservices.com/3d-rendering/architectural/exterior.html
+Redirect 301 /3d-modeling/3d-sculpting.html https://professional3dservices.com/3d-modeling/digital-sculpting.html
+Redirect 301 /3d-rendering/3d-rendering/architectural/walkthrough.html https://professional3dservices.com/3d-rendering/architectural/walkthrough.html
+Redirect 301 /3d-rendering/architectural/walkthrough.html/ https://professional3dservices.com/3d-rendering/architectural/walkthrough.html
+Redirect 301 /3d-rendering/contact.html https://professional3dservices.com/contact.html
+Redirect 301 /3d-modeling/contact.html https://professional3dservices.com/contact.html
+Redirect "/blog/How can 3D modelling enhance architectural design.html" https://professional3dservices.com/blog/How-can-3D-modelling-enhance-architectural-design.html
+Redirect 301 /case-studies/3d-modeling-case-studies.html https://professional3dservices.com/case-studies.html
+Redirect 301 "/blog/10 Ways to Speed Up Your 3D Furniture Design Process" https://professional3dservices.com/blog/3d-furniture-design-process.html
+Redirect 301 /blog/3d-model-for-printing.html https://professional3dservices.com/blog/3d-printing.html
+Redirect 301 /blog/How-can-3D-modelling-enhance-architectural-design.html https://professional3dservices.com/blog/3D-modeling-architecture.html
+Redirect 301 /blog/box-modeling-techniques.html https://professional3dservices.com/blog/box-modeling.html
+Redirect 301 /blog/prepare-3d-model-for-printing.html https://professional3dservices.com/blog/3d-print-model.html
+Redirect 301 /case-studies/augmented-and-virtual-reality-modeling.html https://professional3dservices.com/case-studies/ar-and-vr-modeling-support.html
+Redirect 301 "/blog/3D-file-formats.html#:~:text=Obj%20Format" https://professional3dservices.com/blog/3D-file-formats.html
+Redirect 301 /3d-rendering/3d-furniture-rendering.html https://professional3dservices.com/3d-rendering/furniture.html
+Redirect 301 /portfolio/architectural-design/interior-samples.html https://professional3dservices.com/portfolio/architectural-design-samples.html
+Redirect 301 /portfolio/architectural-design/exterior-samples.html https://professional3dservices.com/portfolio/architectural-design-samples.html
+Redirect 301 /portfolio/architectural-design/walkthrough-samples.html https://professional3dservices.com/portfolio/architectural-design-samples.html
+Redirect 301 /portfolio/mechanical-design-samples.html https://professional3dservices.com/portfolio.html
+Redirect 301 /portfolio/animation-samples.html https://professional3dservices.com/portfolio.html
+Redirect 301 /3d-rendering/architectural/interior/commercial-buildings.html https://professional3dservices.com/3d-rendering/architectural/commercial-buildings.html
+Redirect 301 /3d-rendering/architectural/interior/residential-buildings.html https://professional3dservices.com/3d-rendering/architectural/residential-buildings.html
+Redirect 301 /blog/computer-aided-design.html https://professional3dservices.com/blog/free-cad-software.html
+Redirect 301 /blog/jewelry-model.html https://professional3dservices.com/blog/3d-print-model.html
+Redirect 301 /blog/3D-rendering-tips.html https://professional3dservices.com/blog/photorealistic-rendering.html
+Redirect 301 /blog/3d-rendering-vs-3d-visualization.html https://professional3dservices.com/blog/photorealistic-rendering.html
+Redirect 301 /animation.html https://professional3dservices.com/3d-rendering/architectural/walkthrough.html
+Redirect 301 /blog/3D-modeling-architecture.html https://professional3dservices.com/blog/benefits-of-architecture-3d-models.html
+Redirect 301 /blog/3D-walkthrough-service-benefits.html https://professional3dservices.com/blog/benefits-of-3d-walkthrough-animations.html
+Redirect 301 /blog/furniture-rendering-process.html https://professional3dservices.com/blog/3d-furniture-design-process.html
+Redirect 301 /3d-modeling/augumented-reality-3d-modeling.html https://professional3dservices.com/3d-modeling-for-ar.html
+Redirect 301 /blog/house-floor-plans.html https://professional3dservices.com/blog/floor-plans.html
+Redirect 301 /blog/category/3d-animation.html https://professional3dservices.com/blog.html
+Redirect 301 /blog/category/3d-designing.html https://professional3dservices.com/blog.html
+Redirect 301 /blog/category/3d-modeling.html https://professional3dservices.com/blog.html
+Redirect 301 /blog/category/3d-rendering.html https://professional3dservices.com/blog.html
+Redirect 301 /blog/category/architecture-3d-design.html https://professional3dservices.com/blog.html
+Redirect 301 /blog/category/product-3d-design.html https://professional3dservices.com/blog.html
+Redirect 301 /blog/category/software.html https://professional3dservices.com/blog.html
+Redirect 301 /blog/architectural-visualization.html https://professional3dservices.com/blog/3d-visualization-benefits-for-real-estate.html
+Redirect 301 /blog/3d-product-design.html https://professional3dservices.com/blog/what-is-product-3d-design.html
+Redirect 301 /blog/best-3d-rendering-service-companies.html https://professional3dservices.com/blog/list-of-best-3d-rendering-companies.html
+
+Redirect 410 /blog/category/virtual-services.html
+Redirect 410 /blog/virtual-reality-in-automotive-industry.html
+Redirect 410 /blog/virtual-reality-technolog-for-various-industries.html
+Redirect 410 /process-of-animation.html
+Redirect 410 /virtual-reality.html
+Redirect 410 /3d-animation/medical.html
+Redirect 410 /virtual-services.html
+Redirect 410 /blog/3d.html
+Redirect 410 /ajax/process.php
+Redirect 410 "/3d-modeling/digital-sculpt</p> </div> <p style="
+Redirect 410 /410.shtml
+Redirect 410 /img/rendering/e
+Redirect 410 "/blog/box-"
+Redirect 410 "/3d-mod</p> </div> <p style="
+Redirect 410 /img/blog/maya-m
+Redirect 410 /img/rendering/A
+Redirect 410 /img/modeling/Di
+Redirect 410 /img/rendering/a
+Redirect 410 /3d-modeling/mecha
+Redirect 410 /https://in.pinterest.com/thepro3dstudio/
+Redirect 410 "/3d-character-designing.html'target="
+Redirect 410 /case-studies/medical-3d-modeling-and-animation.html
+Redirect 410 /case-studies/product-animation.html
+Redirect 410 /case-studies/character-animation.html
+Redirect 410 /case-studies/CAD-drawings.html
+Redirect 410 /case-studies/3d-sculpture-modeling.html
+Redirect 410 /case-studies/ar-and-vr-modeling-support.html
+Redirect 410 /case-studies/3d-rendering-floor-plan.html
+Redirect 410 /case-studies/interior-rendering.html
+Redirect 410 /3d-animation/character.html
+Redirect 410 /3d-character-designing.html
+Redirect 410 /3d-modeling/mechanical.html
+Redirect 410 /animation-faq.html
+Redirect 410 /blog/how-can-3D-animation-bolster-your-business.html
+Redirect 410 /blog/mechanical-3d-product-animation-benefits.html
+Redirect 410 /blog/3d-animation-software.html
+Redirect 410 /blog/steps-for-rendering-interiors-in-3dsmax.html
+Redirect 410 /blog/maya-modeling-tools.html
+Redirect 410 /blog/architectural-drafting-in-3d.html
+Redirect 410 /blog/cad-design-uses.html
+Redirect 410 /blog/choosing-best-3d-rendering-company.html
+Redirect 410 /blog/list-of-furniture-types.html
+Redirect 410 /3d-modeling/industrial-furniture-design.html
+Redirect 410 /3d-modeling/product-cgi-services.html
+Redirect 410 /demo/graphic-resources.html
+Redirect 410 /demo/portfolio/illustration.html
+Redirect 410 /demo/pricing.html
+Redirect 410 /demo/case-studies/graphic-design/360-degree-wedding-video.html
+Redirect 410 /demo/digital-graphics-services/web-designing.html
+
+RewriteCond %{QUERY_STRING} ^utm_campaign=Submission&utm_medium=Community&utm_source=GrowthHackers.com$
+RewriteRule .* https://professional3dservices.com/? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^source=post_stats_page---------------------------$
+RewriteRule .* https://professional3dservices.com/? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^C=D;O=A$
+RewriteRule .* https://professional3dservices.com/blog.html? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^C=N;O=D$
+RewriteRule .* https://professional3dservices.com/blog.html? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^source=post_page---------------------------$
+RewriteRule .* https://professional3dservices.com/? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^ref=xranks$
+RewriteRule .* https://professional3dservices.com/? [R=301,L]
+
+
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>
+
+# BEGIN EXPIRES
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 10 days"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType images/gif "access plus 1 week"
+    ExpiresByType images/png "access plus 1 week"
+    ExpiresByType images/jpeg "access plus 1 week"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/x-icon "access plus 1 year"
+</IfModule>
+# END EXPIRES
+
+<IfModule mod_headers.c>
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+Header set Cache-Control "max-age=31536000, public"
+</IfModule>
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{THE_REQUEST} \s[^?]*//
+RewriteRule ^.*$ /$0 [R=301,L,NE]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php83” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php83 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
