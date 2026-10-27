@@ -84,8 +84,10 @@ export function Header({ data }: { data: HeaderData }) {
     setTimeout(() => searchInputRef.current?.focus(), 100)
   }
 
+  const isLightPage = Boolean(pathname?.startsWith('/blog') || pathname?.includes('/blog/'))
   const headerClass = [
     'site-header',
+    isLightPage && 'site-header-light',
     scrolled && 'scrolled',
     activeMenu !== null && 'mega-menu-open',
   ]

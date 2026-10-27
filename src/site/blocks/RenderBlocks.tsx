@@ -3,6 +3,7 @@ import React from 'react'
 import type { PageBlock } from '@/site/types'
 
 import { AboutIntro } from './AboutIntro'
+import { BlogDetail } from './BlogDetail'
 import { CtaHome } from './CtaHome'
 import { Faq } from './Faq'
 import { Hero } from './Hero'
@@ -32,6 +33,8 @@ export function RenderBlocks({ blocks }: { blocks: PageBlock[] }) {
     <>
       {blocks.map((block, i) => {
         switch (block.blockType) {
+          case 'blogDetail':
+            return <BlogDetail key={i} {...block} />
           case 'hero':
             return <Hero key={i} {...block} />
           case 'aboutIntro':

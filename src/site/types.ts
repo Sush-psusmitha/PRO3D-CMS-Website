@@ -320,7 +320,77 @@ export type ServiceCardsBlock = {
   cards: { title: string; description: string; href: string; image: ImageRef }[]
 }
 
+export type BlogTocItem = {
+  id: string
+  label: string
+  isSub?: boolean
+  isActive?: boolean
+}
+
+export type BlogRecentPost = {
+  category: string
+  title: string
+  href: string
+  hasArrow?: boolean
+}
+
+export type BlogSidebarPromo = {
+  badge: string
+  bgImage: ImageRef
+  title: string
+  description: string
+  button: LinkItem
+}
+
+export type BlogChallenge = {
+  id: string
+  number: number
+  title: string
+  description: string
+  solutionBullets: string[]
+}
+
+export type BlogTool = {
+  name: string
+  role: string
+  description: string
+  bullets: string[]
+  note?: string
+}
+
+export type BlogDetailBlock = {
+  blockType: 'blogDetail'
+  heroBg: ImageRef
+  bannerImage: ImageRef
+  title: string
+  category?: string
+  author: {
+    name: string
+    avatar?: ImageRef
+    bio: string
+    social?: { icon: string; href: string; label: string }[]
+  }
+  publishDate: string
+  updatedDate?: string
+  readTime?: string
+  leadParagraph: string
+  secondaryParagraph?: string
+  sections: {
+    id: string
+    title: string
+    paragraphs?: string[]
+    challenges?: BlogChallenge[]
+    tools?: BlogTool[]
+    points?: string[]
+    closingParagraphs?: string[]
+  }[]
+  toc: BlogTocItem[]
+  recentPosts: BlogRecentPost[]
+  sidebarPromo: BlogSidebarPromo
+}
+
 export type PageBlock =
+  | BlogDetailBlock
   | ServiceCardsBlock
   | SolutionsIntroBlock
   | SolutionsHighlightsBlock

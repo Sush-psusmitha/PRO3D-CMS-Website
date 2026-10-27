@@ -10,6 +10,7 @@ import { ScrollAnimations } from '@/site/layout/ScrollAnimations'
 import '@/styles/fontawesome.min.css'
 import '@/styles/slick.min.css'
 import '@/styles/style.css'
+import '@/styles/blog.css'
 
 // Header and footer content come from src/content for now; they become the
 // Header / Footer globals in Payload once the database is connected.

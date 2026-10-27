@@ -371,6 +371,74 @@ a:hover {
   }
 }
 
+/* --------------------------------------------------------------------------
+   SITE HEADER: LIGHT HERO VARIANT (e.g. BLOG INNER PAGES)
+   -------------------------------------------------------------------------- */
+.site-header.site-header-light:not(.scrolled):not(.mega-menu-open):not(:has(.has-mega-menu:hover)) {
+  background: transparent !important;
+  border-bottom: 1px solid transparent !important;
+  box-shadow: none !important;
+}
+
+.site-header.site-header-light:not(.scrolled):not(.mega-menu-open):not(:has(.has-mega-menu:hover)) .header-brand .logo-white {
+  display: none !important;
+}
+
+.site-header.site-header-light:not(.scrolled):not(.mega-menu-open):not(:has(.has-mega-menu:hover)) .header-brand .logo-black {
+  display: block !important;
+}
+
+.site-header.site-header-light:not(.scrolled):not(.mega-menu-open):not(:has(.has-mega-menu:hover)) .header-nav-link {
+  color: #1a1a2e !important;
+}
+
+.site-header.site-header-light:not(.scrolled):not(.mega-menu-open):not(:has(.has-mega-menu:hover)) .header-nav-link .nav-arrow {
+  color: #1a1a2e !important;
+}
+
+.site-header.site-header-light:not(.scrolled):not(.mega-menu-open):not(:has(.has-mega-menu:hover)) .header-search-btn {
+  color: #1a1a2e !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.site-header.site-header-light:not(.scrolled):not(.mega-menu-open):not(:has(.has-mega-menu:hover)) .header-hamburger span {
+  background: #1a1a2e !important;
+}
+
+/* Scrolled state for light header */
+.site-header.site-header-light.scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+.site-header.site-header-light.scrolled .header-brand .logo-white {
+  display: none !important;
+}
+
+.site-header.site-header-light.scrolled .header-brand .logo-black {
+  display: block !important;
+}
+
+.site-header.site-header-light.scrolled .header-nav-link {
+  color: #1a1a2e !important;
+}
+
+.site-header.site-header-light.scrolled .header-nav-link .nav-arrow {
+  color: #1a1a2e !important;
+}
+
+.site-header.site-header-light.scrolled .header-search-btn {
+  color: #1a1a2e !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.site-header.site-header-light.scrolled .header-hamburger span {
+  background: #1a1a2e !important;
+}
+
 .header-container {
   width: 100%;
   max-width: var(--site-max-width);
