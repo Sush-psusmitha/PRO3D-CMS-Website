@@ -7,6 +7,7 @@ import { CallToAction } from '../../blocks/CallToAction/config'
 import { Content } from '../../blocks/Content/config'
 import { FormBlock } from '../../blocks/Form/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
+import { siteBlocks } from '../../blocks/site'
 import { hero } from '@/heros/config'
 import { slugField } from 'payload'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
@@ -23,21 +24,20 @@ import {
 
 export const Pages: CollectionConfig<'pages'> = {
   slug: 'pages',
+  labels: {
+    singular: 'Company Page',
+    plural: 'Company Pages',
+  },
   access: {
     create: authenticated,
     delete: authenticated,
     read: authenticatedOrPublished,
     update: authenticated,
   },
-  // This config controls what's populated by default when a page is referenced
-  // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property
-  // Type safe if the collection slug generic is passed to `CollectionConfig` - `CollectionConfig<'pages'>
-  defaultPopulate: {
-    title: true,
-    slug: true,
-  },
   admin: {
-    defaultColumns: ['title', 'slug', 'updatedAt'],
+    group: 'Company Pages',
+    description: 'Standalone pages: Home, About, Contact, Solutions, FAQs, Pricing, and Legal',
+    defaultColumns: ['title', 'path', 'slug', 'updatedAt'],
     livePreview: {
       url: ({ data, req }) =>
         generatePreviewPath({
@@ -61,6 +61,15 @@ export const Pages: CollectionConfig<'pages'> = {
       required: true,
     },
     {
+      name: 'path',
+      type: 'text',
+      index: true,
+      admin: {
+        position: 'sidebar',
+        description: 'Exact URL path (e.g. "3d-modeling.html", "3d-modeling/product.html", or empty for homepage)',
+      },
+    },
+    {
       type: 'tabs',
       tabs: [
         {
@@ -72,7 +81,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
+              blocks: [...siteBlocks, CallToAction, Content, MediaBlock, Archive, FormBlock],
               required: true,
               admin: {
                 initCollapsed: true,

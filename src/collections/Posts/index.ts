@@ -29,25 +29,19 @@ import { slugField } from 'payload'
 
 export const Posts: CollectionConfig<'posts'> = {
   slug: 'posts',
+  labels: {
+    singular: 'Blog Article',
+    plural: 'Blog Articles',
+  },
   access: {
     create: authenticated,
     delete: authenticated,
     read: authenticatedOrPublished,
     update: authenticated,
   },
-  // This config controls what's populated by default when a post is referenced
-  // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property
-  // Type safe if the collection slug generic is passed to `CollectionConfig` - `CollectionConfig<'posts'>
-  defaultPopulate: {
-    title: true,
-    slug: true,
-    categories: true,
-    meta: {
-      image: true,
-      description: true,
-    },
-  },
   admin: {
+    group: 'Blog & Insights',
+    description: 'The 155 long-form blog articles and technical guides',
     defaultColumns: ['title', 'slug', 'updatedAt'],
     livePreview: {
       url: ({ data, req }) =>

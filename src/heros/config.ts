@@ -36,7 +36,6 @@ export const hero: Field = {
           value: 'lowImpact',
         },
       ],
-      required: true,
     },
     {
       name: 'richText',

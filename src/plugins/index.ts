@@ -3,6 +3,7 @@ import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
 import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import { searchPlugin } from '@payloadcms/plugin-search'
+import { s3Storage } from '@payloadcms/storage-s3'
 import { Plugin } from 'payload'
 import { revalidateRedirects } from '@/hooks/revalidateRedirects'
 import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
@@ -89,4 +90,32 @@ export const plugins: Plugin[] = [
       },
     },
   }),
+  ...(process.env.R2_BUCKET
+    ? [
+        s3Storage({
+          collections: {
+            media: {
+              generateFileURL: ({ filename, prefix }) => {
+                if (process.env.R2_PUBLIC_URL) {
+                  const base = process.env.R2_PUBLIC_URL.replace(/\/+$/, '')
+                  return `${base}${prefix ? `/${prefix}` : ''}/${filename}`
+                }
+                const endpoint = (process.env.R2_ENDPOINT || '').replace(/\/+$/, '')
+                return `${endpoint}/${process.env.R2_BUCKET}${prefix ? `/${prefix}` : ''}/${filename}`
+              },
+            },
+          },
+          bucket: process.env.R2_BUCKET,
+          config: {
+            credentials: {
+              accessKeyId: process.env.R2_ACCESS_KEY_ID || '',
+              secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || '',
+            },
+            region: 'auto',
+            endpoint: process.env.R2_ENDPOINT,
+            forcePathStyle: true,
+          },
+        }),
+      ]
+    : []),
 ]

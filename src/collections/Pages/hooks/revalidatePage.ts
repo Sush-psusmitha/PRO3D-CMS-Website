@@ -15,8 +15,12 @@ export const revalidatePage: CollectionAfterChangeHook<Page> = ({
 
       payload.logger.info(`Revalidating page at path: ${path}`)
 
-      revalidatePath(path)
-      revalidateTag('pages-sitemap', 'max')
+      try {
+        revalidatePath(path)
+        revalidateTag('pages-sitemap', 'max')
+      } catch (err) {
+        payload.logger.warn(`Skipped revalidatePath outside Next.js request context`)
+      }
     }
 
     // If the page was previously published, we need to revalidate the old path
